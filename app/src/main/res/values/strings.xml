@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HeaderFooterGridView</string>
+    <string name="headerfootergridview_title">头尾网格</string>
+    <string name="headerfootergridview_header_view">头View</string>
+    <string name="headerfootergridview_header_item">头Item</string>
+    <string name="headerfootergridview_footer_view">尾View</string>
+    <string name="headerfootergridview_footer_item">尾Item</string>
+    <string name="headerfootergridview_item_number">子项数目：</string>
+    <string name="headerfootergridview_item">Item %1$d</string>
+    <string name="headerfootergridview_header">Header %1$d</string>
+    <string name="headerfootergridview_footer">Footer %1$d</string>
+    <string name="headerfootergridview_hv">Header View %1$d</string>
+    <string name="headerfootergridview_fv">Footer View %1$d</string>
+    <string name="headerfootergridview_toast">第%1$d个子项</string>
+</resources>
