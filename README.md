@@ -1,11 +1,11 @@
 # HeaderFooterGridView
-![ICON](https://github.com/AlexMofer/ProjectX/blob/master/headerfootergridview/icon.png)
+![ICON](https://raw.githubusercontent.com/AlexMofer/ProjectX/master/headerfootergridview/icon.png)
 
 项目详细地址：[**ProjectX**](https://github.com/AlexMofer/ProjectX/tree/master/headerfootergridview)(方便统一管理)
 
 头尾GridView，支持AUTO_FIT模式，头尾模式有两种，无反射代码。
 ## 预览
-![Screenshots](https://github.com/AlexMofer/ProjectX/blob/master/headerfootergridview/screenshots.gif)
+![Screenshots](https://raw.githubusercontent.com/AlexMofer/ProjectX/master/headerfootergridview/screenshots.gif)
 ## 要求
 minSdkVersion 4
 
