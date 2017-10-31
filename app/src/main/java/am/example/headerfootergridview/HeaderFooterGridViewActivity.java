@@ -1,6 +1,9 @@
 package am.example.headerfootergridview;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,7 +18,7 @@ import java.util.Locale;
 import am.example.headerfootergridview.adapters.HeaderFooterGridAdapter;
 import am.widget.headerfootergridview.HeaderFooterGridView;
 
-public class HeaderFooterGridViewActivity extends BaseActivity implements
+public class HeaderFooterGridViewActivity extends AppCompatActivity implements
         CompoundButton.OnCheckedChangeListener, SeekBar.OnSeekBarChangeListener,
         View.OnClickListener, AdapterView.OnItemClickListener {
 
@@ -27,16 +30,24 @@ public class HeaderFooterGridViewActivity extends BaseActivity implements
     private TextView tvFooterItem1, tvFooterItem2, tvFooterItem3;
 
     @Override
-    protected int getContentViewLayoutResources() {
-        return R.layout.activity_headerfootergridview;
-    }
-
-    @Override
-    protected void initResource(Bundle savedInstanceState) {
-        setSupportActionBar(R.id.gird_toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_headerfootergridview);
+        Toolbar mToolbar = findViewById(R.id.gird_toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onBackPressed();
+                }
+            });
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+            }
+        }
         initView();
-        hfgContent = (HeaderFooterGridView) findViewById(R.id.gird_hfg_content);
+        hfgContent = findViewById(R.id.gird_hfg_content);
         ((CheckBox) findViewById(R.id.grid_cb_hv)).setOnCheckedChangeListener(this);
         ((CheckBox) findViewById(R.id.grid_cb_hi)).setOnCheckedChangeListener(this);
         ((CheckBox) findViewById(R.id.grid_cb_fv)).setOnCheckedChangeListener(this);
