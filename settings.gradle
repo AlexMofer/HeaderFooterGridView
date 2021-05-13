@@ -1,1 +1,3 @@
+rootProject.name = "HeaderFooterGridView"
 include ':app'
+include ':headerfootergridview'
